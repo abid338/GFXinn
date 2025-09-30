@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GFXinn</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">GFXinn</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact us</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#">Artificial Intelligence</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Web Development</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">App Development</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled text-warning" aria-disabled="true"
+                >Disabled</a
+              >
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+          <!-- Buttons  -->
+          <div class="mx-2">
+            <!-- Login  -->
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#loginModal"
+            >
+              Login
+            </button>
+            <!-- Sign Up  -->
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#signupModal"
+            >
+              Sign Up
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Login Modal  -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="loginModalLabel">
+              Login to GFXinn
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="row mb-3">
+                <label for="inputEmail3" class="col-sm-2 col-form-label"
+                  >Email</label
+                >
+                <div class="col-sm-10">
+                  <input type="email" class="form-control" id="inputEmail3" />
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="inputPassword3" class="col-sm-2 col-form-label"
+                  >Password</label
+                >
+                <div class="col-sm-10">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="inputPassword3"
+                  />
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Sign in</button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div
+      class="modal fade"
+      id="signupModal"
+      tabindex="-1"
+      aria-labelledby="signupModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <!-- Header -->
+          <div class="modal-header">
+            <h5 class="modal-title" id="signupModalLabel">Sign up to GFXinn</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <!-- Body -->
+          <div class="modal-body p-4">
+            <form class="row g-3">
+              <div class="col-md-6">
+                <label for="inputName4" class="form-label">Name</label>
+                <input type="text" class="form-control" id="inputName4" />
+              </div>
+              <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail4" />
+              </div>
+
+              <div class="col-12">
+                <label for="inputAddress" class="form-label">Address</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputAddress"
+                  placeholder="1234 Main St"
+                />
+              </div>
+              <div class="col-12">
+                <label for="inputPermanentAddress" class="form-label"
+                  >Permanent Address</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputPermanentAddress"
+                  placeholder="Apartment, studio, or floor"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="inputDistrict" class="form-label">District</label>
+                <input type="text" class="form-control" id="inputDistrict" />
+              </div>
+              <div class="col-md-6">
+                <label for="inputCity" class="form-label">City</label>
+                <input type="text" class="form-control" id="inputCity" />
+              </div>
+              <div class="col-md-4">
+                <label for="inputState" class="form-label">Province</label>
+                <select id="inputState" class="form-select">
+                  <option selected>Punjab</option>
+                  <option>Sindh</option>
+                  <option>KPK</option>
+                  <option>Balochistan</option>
+                </select>
+              </div>
+              <div class="col-md-2">
+                <label for="inputZip" class="form-label">Zip code</label>
+                <input type="text" class="form-control" id="inputZip" />
+              </div>
+              <div class="mb-3">
+                <label for="inputPassword4" class="form-label">Password</label>
+                <div class="input-group">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="inputPassword4"
+                    placeholder="Password"
+                  />
+                  <button
+                    class="btn btn-outline-secondary"
+                    type="button"
+                    onclick="togglePassword()"
+                  >
+                    👁️
+                  </button>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="inputConfirmPassword4" class="form-label"
+                  >Confirm Password</label
+                >
+                <div class="input-group">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="inputConfirmPassword4"
+                    placeholder="Confirm Password"
+                  />
+                  <button
+                    class="btn btn-outline-secondary"
+                    type="button"
+                    onclick="toggleConfirmPassword()"
+                  >
+                    👁️
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- Footer -->
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Sign up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Password toggle scripts -->
+    <script>
+      function togglePassword() {
+        const pass = document.getElementById("inputPassword4");
+        pass.type = pass.type === "password" ? "text" : "password";
+      }
+      function toggleConfirmPassword() {
+        const pass = document.getElementById("inputConfirmPassword4");
+        pass.type = pass.type === "password" ? "text" : "password";
+      }
+    </script>
+
+    <!-- Carousel -->
+    <div
+      id="carouselExampleInterval"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner carousel-fade">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img
+            src="pic1.jpg"
+            class="d-block w-100"
+            alt="1"
+            style="width: 1400px; height: 400px"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Welcome to GFXinn Blog</h5>
+            <p>
+              Your daily dose of graphic design tips, tricks, and inspiration.
+            </p>
+            <button type="button" class="btn btn-primary">Explore Blog</button>
+            <button type="button" class="btn btn-success">Read Articles</button>
+            <button type="button" class="btn btn-warning">Get Inspired</button>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img
+            src="nadine.jpg"
+            class="d-block w-100"
+            alt="2"
+            style="width: 1400px; height: 400px"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Learn & Create</h5>
+            <p>
+              Step-by-step tutorials to sharpen your Photoshop and Illustrator
+              skills.
+            </p>
+            <button type="button" class="btn btn-primary">
+              Start Learning
+            </button>
+            <button type="button" class="btn btn-info">View Tutorials</button>
+            <button type="button" class="btn btn-danger">
+              Download Resources
+            </button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="pic3.jpg"
+            class="d-block w-100"
+            alt="3"
+            style="width: 1400px; height: 400px"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Join the Creative Community</h5>
+            <p>Share your designs, explore ideas, and grow with GFXinn Blog.</p>
+            <button type="button" class="btn btn-success">Join Now</button>
+            <button type="button" class="btn btn-danger">
+              Share your work
+            </button>
+            <button type="button" class="btn btn-warning">
+              Connect with Creatives
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- controls -->
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleInterval"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleInterval"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- Blog 1 -->
+    <!-- Blog Section -->
+    <div class="container my-5">
+      <h2 class="mb-4 text-center">Latest Blog Posts</h2>
+      <div class="row mb-2">
+        <!-- Blog 1 -->
+        <div class="col-md-6">
+          <div
+            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary-emphasis"
+                >World</strong
+              >
+              <h3 class="mb-0">The Future of AI</h3>
+              <div class="mb-1 text-body-secondary">Sep 30, 2025</div>
+              <p class="card-text mb-auto">
+                Discover how Artificial Intelligence is transforming industries,
+                from healthcare to education.
+              </p>
+              <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img
+                src="https://media.istockphoto.com/id/1914036965/photo/img_1330-jpg.jpg?s=1024x1024&w=is&k=20&c=kC-EXa3zuKfrgErRpO0MnGqmDjTtnVYmbwof-9sIA7M="
+                class="bd-placeholder-img"
+                width="200"
+                height="250"
+                alt="AI Future"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog 2 -->
+        <div class="col-md-6">
+          <div
+            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-success-emphasis"
+                >Design</strong
+              >
+              <h3 class="mb-0">Web Design Trends 2025</h3>
+              <div class="mb-1 text-body-secondary">Sep 28, 2025</div>
+              <p class="mb-auto">
+                Explore the latest UI and UX design trends that will shape the
+                future of websites.
+              </p>
+              <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img
+                src="https://images.unsplash.com/photo-1649000808933-1f4aac7cad9a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                class="bd-placeholder-img"
+                width="200"
+                height="250"
+                alt="Web Design Trends"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog 3 -->
+        <div class="col-md-6">
+          <div
+            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-warning-emphasis"
+                >Tech</strong
+              >
+              <h3 class="mb-0">Getting Started with Bootstrap</h3>
+              <div class="mb-1 text-body-secondary">Sep 25, 2025</div>
+              <p class="mb-auto">
+                A beginner’s guide to Bootstrap 5, helping you build responsive
+                websites quickly and easily.
+              </p>
+              <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img
+                src="https://images.unsplash.com/photo-1669023414166-a4cc7c0fe1f5?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                class="bd-placeholder-img"
+                width="200"
+                height="250"
+                alt="Bootstrap Guide"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog 4 -->
+        <div class="col-md-6">
+          <div
+            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-danger-emphasis"
+                >Community</strong
+              >
+              <h3 class="mb-0">Freelancing Tips for Beginners</h3>
+              <div class="mb-1 text-body-secondary">Sep 20, 2025</div>
+              <p class="mb-auto">
+                Learn how to kickstart your freelancing career with simple
+                strategies and best practices.
+              </p>
+              <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img
+                src="https://images.unsplash.com/photo-1650821414390-276561abd95a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                class="bd-placeholder-img"
+                width="200"
+                height="250"
+                alt="Freelancing Tips"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Home body page  -->
+    <div class="container py-4">
+      <hr />
+      <header class="pb-3 mb-4 border-bottom">
+        <a
+          href="/"
+          class="d-flex align-items-center text-body-emphasis text-decoration-none"
+        >
+          <span class="fs-4">Top Trends</span>
+        </a>
+      </header>
+
+      <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+        <div class="container-fluid py-5">
+          <h1 class="display-5 fw-bold">Freelancing</h1>
+          <p class="col-md-8 fs-4">
+            Freelancing is a career path where you work independently and offer
+            your skills to different clients. It gives you the freedom to choose
+            projects, set your own schedule, and decide your rates. It’s a
+            perfect choice for those who want flexibility and personal growth.
+          </p>
+          <button class="btn btn-primary btn-lg" type="button">
+            Read more
+          </button>
+        </div>
+      </div>
+
+      <div class="row align-items-md-stretch">
+        <div class="col-md-6">
+          <div class="h-100 p-5 text-bg-dark rounded-3">
+            <h2>Artificial Intelligence</h2>
+            <p>
+              Artificial Intelligence (AI) is one of the fastest-growing
+              technologies that allows machines to think, learn, and make
+              decisions like humans. It is transforming industries such as
+              healthcare, business, education, and entertainment. Learning AI
+              today can open doors to many future opportunities.
+            </p>
+            <button class="btn btn-outline-light" type="button">Explore</button>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="h-100 p-5 bg-body-secondary border rounded-3">
+            <h2>High Income Skills</h2>
+            <p>
+              High income skills are those that are in great demand and provide
+              excellent earning potential, such as programming, digital
+              marketing, content creation, and graphic design. By mastering
+              these skills, you can significantly increase your career
+              opportunities and financial growth.
+            </p>
+            <button class="btn btn-outline-secondary" type="button">
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sign up body form  -->
+      <div class="row align-items-center g-lg-5 py-5">
+        <div class="col-lg-7 text-center text-lg-start">
+          <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">
+            Get Started with GFXinn sign-up form
+          </h1>
+          <p class="col-lg-10 fs-4">
+            Below is an example form built entirely with Bootstrap’s form
+            controls. Each required form group has a validation state that can
+            be triggered by attempting to submit the form without completing it.
+          </p>
+        </div>
+        <div class="col-md-10 mx-auto col-lg-5">
+          <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
+            <div class="form-floating mb-3">
+              <input
+                type="email"
+                class="form-control"
+                id="floatingInput"
+                placeholder="name@example.com"
+              />
+              <label for="floatingInput">Email address</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="password"
+                class="form-control"
+                id="floatingPassword"
+                placeholder="Password"
+              />
+              <label for="floatingPassword">Password</label>
+            </div>
+            <div class="checkbox mb-3">
+              <label>
+                <input type="checkbox" value="remember-me" /> Remember me
+              </label>
+            </div>
+            <button class="w-100 btn btn-lg btn-primary" type="submit">
+              Sign up
+            </button>
+            <hr class="my-4" />
+            <small class="text-body-secondary">
+              By clicking Sign up, you agree to the terms of use.
+            </small>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer  -->
+    <div class="bg-dark text-secondary px-3 py-2 text-center">
+      <div class="py-5">
+        <h1 class="display-5 fw-bold text-white">Learn Freelancing Here</h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="fs-5 mb-4">
+            Quickly design and customize responsive mobile-first sites with
+            Bootstrap, the world’s most popular front-end open source toolkit,
+            featuring Sass variables and mixins, responsive grid system,
+            extensive prebuilt components, and powerful JavaScript plugins.
+          </p>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <button
+              type="button"
+              class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold"
+            >
+              Get Registered
+            </button>
+            <button type="button" class="btn btn-outline-light btn-lg px-4">
+              Read More
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Script -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
